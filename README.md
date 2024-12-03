@@ -65,22 +65,22 @@ open another terminal in vscode(ctrl+shift+`)
 
 ```
 npx hardhat ignition deploy ignition/modules/NFT.js --network sepoliadeploy 
+```
 
 after that deploy the next contract
-
+```
 npx hardhat ignition deploy ignition/modules/NFTUUPS.js --network sepolia
+```
 
 ## Contract Deployment 1 - Sepolia 
-
 ```
 https://sepolia.etherscan.io/address/0x4afE4821ccFB11e098508f300B888bC236b99F46
-
 ```
+
 ## Contract Deployment 2 Upgradable - Sepolia 
 
 ```
 https://sepolia.etherscan.io/address/0x0C5FE6E294cE3EAdA6CF78166680D8a5621F4D87
-
 ```
 
 This project is licensed under the MIT license - see the [LICENSE](LICENSE) file for details.
