@@ -1,6 +1,6 @@
-# NFT Marketplace 🎨💰
+# Ethereum NFT Marketplace 
 
-This repository contains the Solidity smart contract for an NFT marketplace, built to facilitate both primary and secondary sales of NFTs. Users can mint NFTs, list them for sale, and engage in secondary market transactions. The contract is designed to be upgradable for future enhancements and includes comprehensive event logging for transparency.
+This project is a decentralized NFT Marketplace built on the Ethereum Blockchain. It allows users to create, buy, and sell non-fungible tokens (NFTs) securely and transparently using Ethereum's robust and widely adopted infrastructure.
 
 ## 🛠️ Built With
 
@@ -13,30 +13,75 @@ This repository contains the Solidity smart contract for an NFT marketplace, bui
 
 ## Key Features ✨
 
-- **Primary Sales**: Users can mint NFTs and list them for sale directly on the marketplace. 🖼️
-- **Secondary Sales**: NFTs can be resold, with transaction details logged for transparency. 🔄
-- **Minting & Listing**: Users can mint their own NFTs and list them for sale. 🛒
-- **Event Logging**: The contract emits events for minting, listing, and transfers to ensure transparency. 📊
-- **Upgradability**: The contract has been designed with upgradability in mind to accommodate future features and improvements. 🔧
+- **Mint NFTs**: Users can mint their own NFTs, with metadata stored on decentralized storage.
+- **Buy & Sell NFTs**: A user-friendly interface for trading NFTs using Ethereum's native cryptocurrency, ETH. 
+- **Smart Contract Integration**: Fully functional smart contracts written in Solidity and deployed on the Ethereum network. 
+- **Secure Wallet Integration**: MetaMask integration for wallet connection and transaction signing.
+- **Scalability**: Built with efficient contract design to minimize gas costs..
+
+- ### Installation
+
+1. **Clone the repository**:
+
+   ```bash
+   https://github.com/PaiGoManh/NFT_Marketplace--spericon-.git
+   
+2. Install dependencies
+
+```
+npm install
+```
+```
+npm install --save-dev hardhat
+```
+```
+npm hardhat compile
+```
+Add a main network to hardhat.config.
+- here im using sepolia and infura 
+- add your api key for your sen kpolia from infura
+- add your metamask private key and your ether sca
+eg.
+```
+module.exports = {
+  solidity: "0.8.22",
+  networks: {
+    sepolia: {
+      url: `https://sepolia.infura.io/v3/${process.env.INFURA_URL}`,
+      accounts: [process.env.PRIVATE_KEY],
+    },
+  },
+  etherscan: {
+    apiKey: {
+      sepolia: process.env.ETHERSCAN_API_KEY,
+    },
+  },
+};
+```
+```
+npx hardhat node
+```
+open another terminal in vscode(ctrl+shift+`)
+
+```
+npx hardhat ignition deploy ignition/modules/NFT.js --network sepoliadeploy 
+
+after that deploy the next contract
+
+npx hardhat ignition deploy ignition/modules/NFTUUPS.js --network sepolia
 
 ## Contract Deployment 1 - Sepolia 
 
 ```
-https://sepolia.etherscan.io/address/0x55cBEf5AD099197333DB9eaCe19f112E0cAB849d
+https://sepolia.etherscan.io/address/0x4afE4821ccFB11e098508f300B888bC236b99F46
 
 ```
 ## Contract Deployment 2 Upgradable - Sepolia 
 
 ```
-https://sepolia.etherscan.io/address/0xAA779502829F5EC0f45306B05028C100c2662de8
+https://sepolia.etherscan.io/address/0x0C5FE6E294cE3EAdA6CF78166680D8a5621F4D87
 
 ```
 
-### 🔑 Important Notes
-
-- Make sure to replace the `PRIVATE_KEY`, `INFURA_URL`, `ETHERSCAN_API_KEY`, and other sensitive credentials in the `.env` file with your own credentials for secure transaction handling. 💼
-
-
-## 📄 License
 This project is licensed under the MIT license - see the [LICENSE](LICENSE) file for details.
 
