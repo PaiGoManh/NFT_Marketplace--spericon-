@@ -35,7 +35,7 @@ npm install
 npm install --save-dev hardhat
 ```
 ```
-npm hardhat compile
+npx hardhat compile
 ```
 Add a main network to hardhat.config.
 - here im using sepolia and infura 
